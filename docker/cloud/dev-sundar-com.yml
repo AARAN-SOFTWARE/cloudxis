@@ -1,0 +1,19 @@
+services:
+  dev_sundar_com:
+    image: codexion-cloud:v2
+    container_name: dev_sundar_com
+    ports:
+      - "8001:8000"
+      - "5001:5001"
+      - "3001:3001"
+    volumes:
+      - ../../apps/devops/cloud:/home/devops/cloud
+      - ../../apps/shared:/home/devops/cloud/shared
+    networks:
+      - codexion-network
+    restart: unless-stopped
+    tty: true
+
+networks:
+  codexion-network:
+    external: true
