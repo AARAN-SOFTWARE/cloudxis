@@ -1,9 +1,7 @@
 # cloudxis
 Deploy. Scale. Control. – All in One Cloud Command
 
-
 <img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/4b0fa6f6-770c-4930-91f2-4d15acf30ffc" />
-
 
 **Tagline:** *"Effortless Cloud Deployment & Management"*  
 
