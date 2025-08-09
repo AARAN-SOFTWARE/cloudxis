@@ -3,7 +3,7 @@
 #### 1. Build Docker and Tag the Image
 
 ```
-docker build -t codexion-cloud:v2 -f docker/cloud/Dockerfile  docker/cloud
+docker build -t cloudxis:v2 -f docker/cloud/Dockerfile  docker/cloud
 ```
 
 ### 2. create network for codexion
@@ -15,7 +15,7 @@ docker network create codexion-network
 ### 3. create container for mariadb
 
 ```
- docker compose -f docker/cloud/mariadb-local.yml up -d
+ docker compose -f docker/cloud/mariadb.yml up -d
 ```
 
 ### 4. Check mariadb is installed
@@ -40,8 +40,3 @@ docker compose -f docker/cloud/dev-software-com.yml up -d
 ```
 docker exec -it dev_software_com bash
 ```
-
-
-docker compose -f docker/cloud/site-aaranerp-com.yml up -d
-
-docker exec -it dev_software_com bash
