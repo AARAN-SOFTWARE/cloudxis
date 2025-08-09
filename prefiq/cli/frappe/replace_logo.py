@@ -10,10 +10,10 @@ PathType = Union[str, os.PathLike]
 BENCH_DIR: str = "/home/devops/frappe-bench"
 
 SRC_FRAPPE_DIR: str = "/home/devops/cloudnix/logo/frappe"
-DEST_FRAPPE_DIR: str = "/home/devops/frappe-bench/apps/frappe/frappe/public/images"
+DEST_FRAPPE_DIR: str = "/home/devops/cloud/frappe-bench/apps/frappe/frappe/public/images"
 
 SRC_ERPNEXT_DIR: str = "/home/devops/cloudnix/logo/erpnext"
-DEST_ERPNEXT_DIR: str = "/home/devops/frappe-bench/apps/erpnext/erpnext/public/images"
+DEST_ERPNEXT_DIR: str = "/home/devops/cloud/frappe-bench/apps/erpnext/erpnext/public/images"
 
 FRAPPE_FILES: list[str] = [
     "frappe-favicon.svg",
@@ -24,9 +24,9 @@ FRAPPE_FILES: list[str] = [
 
 ERPNEXT_FILES: list[str] = [
     "erpnext-favicon.svg",
-    "erpnext-framework-logo.svg",
+    "erpnext-logo.svg",
     "erpnext-logo.png",
-    "erpnext-framework-logo.png",
+    "erpnext-logo-blue.svg",
 ]
 
 # Backup location
