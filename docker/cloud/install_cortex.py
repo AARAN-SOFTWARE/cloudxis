@@ -5,7 +5,7 @@ from pathlib import Path
 import platform
 
 REPO_URL = "https://github.com/AARAN-SOFTWARE/codexion.git"
-PROJECT_DIR = Path.home() / "codexion"
+PROJECT_DIR = Path("/home/devops/cloud/codexion")
 MODE = os.environ.get("MODE", "dev")  # "prod" or "dev"
 
 
