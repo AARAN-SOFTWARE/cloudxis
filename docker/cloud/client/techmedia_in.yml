@@ -7,7 +7,7 @@ services:
       - "5005:5005"
       - "3005:3005"
     volumes:
-      - ../../apps/devops/techmedia_in/cloud:/home/devops/cloud
+      - ../../../../cloud/techmedia_in:/home/devops/cloud
     networks:
       - codexion-network
     restart: unless-stopped
