@@ -1,13 +1,13 @@
 services:
-  dev_software_com:
+  techmedia_in:
     image: cloudxis:v2
-    container_name: dev_software_com
+    container_name: techmedia_in
     ports:
-      - "8001:8000"
-      - "5001:5001"
-      - "3001:3001"
+      - "8005:8000"
+      - "5005:5005"
+      - "3005:3005"
     volumes:
-      - ../../apps/devops/cloud:/home/devops/cloud
+      - ../../apps/devops/techmedia_in/cloud:/home/devops/cloud
     networks:
       - codexion-network
     restart: unless-stopped

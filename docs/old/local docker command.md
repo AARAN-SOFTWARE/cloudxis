@@ -9,7 +9,7 @@ commands.
 
 ### 🧼 1. **Remove stopped containers, unused networks, dangling images, and build cache**
 
-```bash
+```
 docker system prune -a
 ```
 
@@ -18,7 +18,7 @@ docker system prune -a
 
 **If you want to auto-confirm:**
 
-```bash
+```
 docker system prune -a -f
 ```
 
@@ -39,7 +39,7 @@ docker system prune -a -f
 
 ## 💥 Ultimate One-Liner (Careful!)
 
-```bash
+```
 docker system prune -a --volumes -f
 ```
 
