@@ -73,15 +73,61 @@ bench --site techmedia.in destroy-all-sessions
 ```
 
 
+```
+server {
+    listen 80;
+    server_name techmedia.in;
+
+    location / {
+        proxy_pass http://127.0.0.1:3005;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+```
+
+```
+server {
+    listen 80;
+    server_name erp.techmedia.in;
+
+    location / {
+        proxy_pass http://127.0.0.1:8005;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+```
+sudo ln -s /etc/nginx/sites-available/techmedia.in /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/erp.techmedia.in /etc/nginx/sites-enabled/
+
+sudo nginx -t
+sudo systemctl reload nginx
+
+
+```
+sudo certbot --nginx
+```
+
+
+
+
 curl -I http://techmedia.in
 
-dig +short http://techmedia.in
+dig -I http://erp.techmedia.in
 
 curl -I -v http://techmedia.in 2>&1 | grep "Connected to"
 
 curl -I -v http://erp.techmedia.in 2>&1 | grep "Connected to"
 
 nslookup techmedia.in 8.8.8.8
+
 nslookup erp.techmedia.in 8.8.8.8
 
 nslookup techmedia.in 1.1.1.1
@@ -90,5 +136,13 @@ nslookup techmedia.in 1.1.1.1
 
 
 
+
+history -c        # Clear the current session's history
+history -w        # Write the empty history to the file
+
+If you also want to remove the history file entirely:
+
+
+rm ~/.bash_history
 
 
